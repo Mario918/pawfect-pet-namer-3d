@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom pet palette
+				pet: {
+					'pink': '#FFDEE2',
+					'blue': '#D3E4FD',
+					'yellow': '#FEF7CD',
+					'green': '#F2FCE2',
+					'purple': '#E5DEFF',
+					'peach': '#FDE1D3',
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,38 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-slow': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'pop': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'70%': {
+						transform: 'scale(1.05)'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
+				'pop': 'pop 0.3s ease-out forwards'
+			},
+			fontFamily: {
+				'bubblegum': ['"Bubblegum Sans"', 'cursive'],
+				'comic': ['"Comic Neue"', 'cursive']
 			}
 		}
 	},
